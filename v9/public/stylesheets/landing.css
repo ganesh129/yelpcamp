@@ -1,0 +1,66 @@
+body{
+    background-color:#000;
+}
+#landing-header{
+    z-index:1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+    
+}
+#landing-header h1{
+    color:#fff;
+}
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://images.indianexpress.com/2017/05/mumbai-indians-gm1.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://i.pinimg.com/originals/32/25/23/32252314266ff767bd8d3322a07b7e52.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://scontent.fccu10-1.fna.fbcdn.net/v/t1.0-9/32130693_444776545943733_6812207453061513216_n.jpg?_nc_cat=103&_nc_ht=scontent.fccu10-1.fna&oh=12e110a071ca6ccb1ae1d97062e0bc61&oe=5D02E19C);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://scontent.fccu10-1.fna.fbcdn.net/v/t1.0-9/14322456_191805787907478_1221201863726888405_n.jpg?_nc_cat=102&_nc_ht=scontent.fccu10-1.fna&oh=b917837d8e4064fdd0c1c6f8d5f82178&oe=5D10E5F3);
+  animation-delay: 40s; 
+}
+
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+

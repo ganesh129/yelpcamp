@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>yelcamp</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="tylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+<nav>
+    <div class="navbar navbar-default">
+        <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="/">YELCAMP</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <div class="nav navbar-nav navbar-right">
+                    <% if(!currentUser){ %>
+                    <li><a href="/login">login</a></li>
+                    <li><a href="/register">signup</a></li>
+                   <% }else{ %>
+                   <li>signed in as <strong><%= currentUser.username %></strong></li>
+                    <li><a href="/logout">logout</a></li>
+                    <% } %>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+</nav>
