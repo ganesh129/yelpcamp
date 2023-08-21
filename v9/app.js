@@ -18,7 +18,9 @@ var campgroundRoutes=require("./routes/campgrounds");
 var commentRoutes=require("./routes/comments");
 var indexRoutes=require("./routes/index");
  //Passport configuration
- mongoose.connect("mongodb://localhost/Yel_camp_v8");
+ mongoose.connect("mongodb://localhost/Yel_camp_v8", {
+    useMongoClient: true,
+  });
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname +"/public"));
@@ -50,6 +52,6 @@ app.use(indexRoutes);
 
 
 
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("the yelcamp server has started");
+app.listen(process.env.PORT || 5000, process.env.IP, function(){
+    console.log("the yelcamp server has started",process.env.PORT, process.env.IP);
 });
